@@ -1,6 +1,8 @@
 <nav>
-  <a href="/" alt="HomePage" class="site-link">Home</a>
-  <a href="PhilosopherStone" alt="book1" class="site-link">Philosopher's Stone</a>
-  <a href="GobletOfFire" alt="book2" class="site-link">Goblet of Fire</a>
-  <a href="DeathlyHallows" alt="book3" class="site-link">Deathly Hallows</a>
+  <% Object.keys(articles).forEach(function (id) { %>
+    <a href="/<%= articles[id].simple %>" class="site-link">
+      <%= articles[id].simple %> 
+    </a>
+    <% }) %>
 </nav>
+
